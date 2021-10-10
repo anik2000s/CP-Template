@@ -77,6 +77,11 @@ ll mod_pow(ll base, ll exp, ll mod){
 //     }
 // }
 
+vector<int> d4x {0,1,0,-1};
+vector<int> d4y {-1,0,1,0};
+vector<int> d8x {0,1,1,1,0,-1,-1,-1};
+vector<int> d8y {-1,-1,0,1,1,1,0,-1};
+
 
 void solve(){
     
@@ -86,7 +91,7 @@ int main(){
     fast_io;
     init_code();
     ll t=1;
-    cin>>t;
+    // cin>>t;
     // ll a=t;
     while(t--){
         // cout<<"Case #"<<a-t<<": ";
