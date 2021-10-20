@@ -86,42 +86,42 @@ ll mod_pow(ll base, ll exp, ll mod){
 // vector<ll> a;
 // vector<ll> tree;
 
-// void build(ll n, ll start, ll end){
+// void build(ll node, ll start, ll end){
 //     if(start==end){
-//         tree[n]=a[start];
+//         tree[node]=a[start];
 //         return;
 //     }
 //     ll mid=start+((end-start)/2);
-//     build(2*n,start,mid);
-//     build(2*n+1,mid+1,end);
-//     tree[n]=tree[2*n]+tree[2*n+1];
+//     build(2*node,start,mid);
+//     build(2*node+1,mid+1,end);
+//     tree[node]=tree[2*node]+tree[2*node+1];
 // }
 
-// ll query(ll n,ll start, ll end, ll l,ll r){
+// ll query(ll node, ll start, ll end, ll l, ll r){
 //     if(start>r || end<l){
 //         return 0;
 //     }
 //     if(l<=start && end<=r){
-//         return tree[n];
+//         return tree[node];
 //     }
 //     ll mid=start+((end-start)/2);
-//     ll left=query(2*n,start,mid,l,r);
-//     ll right=query(2*n+1,mid+1,end,l,r);
+//     ll left=query(2*node,start,mid,l,r);
+//     ll right=query(2*node+1,mid+1,end,l,r);
 //     return left+right;
 // }
 
-// void modify_tree(ll n, ll start, ll end, ll u, ll v){
+// void modify_tree(ll node, ll start, ll end, ll index, ll val){
 //     if(start==end){
-//         tree[n]=v;
+//         tree[node]=val;
 //         return;
 //     }
 //     ll mid=start+((end-start)/2);
-//     if(u<=mid){
-//         modify_tree(2*n,start,mid,u,v);
+//     if(index<=mid){
+//         modify_tree(2*node,start,mid,index,val);
 //     }else{
-//         modify_tree(2*n+1,mid+1,end,u,v);
+//         modify_tree(2*node+1,mid+1,end,index,val);
 //     }
-//     tree[n]=tree[2*n]+tree[2*n+1];
+//     tree[node]=tree[2*node]+tree[2*node+1];
 // }
 
 
