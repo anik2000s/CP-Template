@@ -63,6 +63,9 @@ ll mod_pow(ll base, ll exp, ll mod){
     return ans%mod;
 }
 
+
+// SIEVE //
+
 // const ll maxN=1000000;
 // ll prime[maxN+1];
 
@@ -77,10 +80,57 @@ ll mod_pow(ll base, ll exp, ll mod){
 //     }
 // }
 
-vector<int> d4x {0,1,0,-1};
-vector<int> d4y {-1,0,1,0};
-vector<int> d8x {0,1,1,1,0,-1,-1,-1};
-vector<int> d8y {-1,-1,0,1,1,1,0,-1};
+
+// SEGMENT TREE //
+
+// vector<ll> a;
+// vector<ll> tree;
+
+// void build(ll n, ll start, ll end){
+//     if(start==end){
+//         tree[n]=a[start];
+//         return;
+//     }
+//     ll mid=start+((end-start)/2);
+//     build(2*n,start,mid);
+//     build(2*n+1,mid+1,end);
+//     tree[n]=tree[2*n]+tree[2*n+1];
+// }
+
+// ll query(ll n,ll start, ll end, ll l,ll r){
+//     if(start>r || end<l){
+//         return 0;
+//     }
+//     if(l<=start && end<=r){
+//         return tree[n];
+//     }
+//     ll mid=start+((end-start)/2);
+//     ll left=query(2*n,start,mid,l,r);
+//     ll right=query(2*n+1,mid+1,end,l,r);
+//     return left+right;
+// }
+
+// void modify_tree(ll n, ll start, ll end, ll u, ll v){
+//     if(start==end){
+//         tree[n]=v;
+//         return;
+//     }
+//     ll mid=start+((end-start)/2);
+//     if(u<=mid){
+//         modify_tree(2*n,start,mid,u,v);
+//     }else{
+//         modify_tree(2*n+1,mid+1,end,u,v);
+//     }
+//     tree[n]=tree[2*n]+tree[2*n+1];
+// }
+
+
+// GRID //
+
+// vector<int> d4x {0,1,0,-1};
+// vector<int> d4y {-1,0,1,0};
+// vector<int> d8x {0,1,1,1,0,-1,-1,-1};
+// vector<int> d8y {-1,-1,0,1,1,1,0,-1};
 
 
 void solve(){
@@ -91,7 +141,7 @@ int main(){
     fast_io;
     init_code();
     ll t=1;
-    // cin>>t;
+    cin>>t;
     // ll a=t;
     while(t--){
         // cout<<"Case #"<<a-t<<": ";
