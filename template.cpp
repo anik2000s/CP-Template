@@ -11,6 +11,7 @@ using namespace std;
 #define rall(a) a.rbegin(),a.rend()
 #define MOD 1000000007
 #define MOD1 998244353
+#define vsz 200005
 #define ff first
 #define ss second
 #define REP(i,a,n) for(ll i=a;i<n;i++)
@@ -136,6 +137,7 @@ ll mod_pow(ll base, ll exp, ll mod){
 void solve(){
     
 }
+
 
 int main(){
     fast_io;
